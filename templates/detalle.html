@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head><title>Detalle de Ruta</title></head>
+<body>
+    <h2>Detalle de Ruta</h2>
+    <p><strong>Empresa:</strong> {{ empresa[0] }}</p>
+
+    {% if empresa[1] %}
+        <img src="{{ url_for('static', filename='imagenes/' + empresa[1]) }}" width="300">
+    {% endif %}
+
+    <h3>Paraderos:</h3>
+    <ul>
+        {% for p in paraderos %}
+            <li>{{ p }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Distritos:</h3>
+    <ul>
+        {% for d in distritos %}
+            <li>{{ d }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/rutas">⬅ Volver</a>
+</body>
+</html>
 
