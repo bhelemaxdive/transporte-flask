@@ -1,7 +1,7 @@
 image: python:3.11
 
 tasks:
-  - init: pip install flask
+  - init: pip install -r requirements.txt
     command: python3 init_db.py && python3 app.py
 
 ports:
