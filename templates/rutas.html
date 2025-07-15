@@ -1,1 +1,17 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rutas Disponibles</title>
+</head>
+<body>
+    <h2>Rutas Disponibles</h2>
+    <ul>
+        {% for ruta_id, nombre_ruta, empresa_nombre in rutas %}
+            <li>
+                <a href="/detalle/{{ ruta_id }}">{{ nombre_ruta }}</a> - Empresa: {{ empresa_nombre }}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/menu">⬅ Volver al menú</a>
+</body>
+</html>
