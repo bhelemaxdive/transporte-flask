@@ -1,1 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h2>Iniciar Sesión</h2>
+    <form method="post">
+        <label>Usuario:</label><br>
+        <input type="text" name="usuario"><br><br>
 
+        <label>Contraseña:</label><br>
+        <input type="password" name="clave"><br><br>
+
+        <button type="submit">Ingresar</button>
+    </form>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
